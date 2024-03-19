@@ -286,7 +286,7 @@ class TabsRenderable(JupyterMixin):
             # If the first tab isn't displayed, then show a "-" tab
             if self.first_tab > 0:
                 yield Segment(box.mid_left, border_style)
-                yield Segment(f' - ', style)
+                yield Segment(' - ', style)
                 yield Segment(box.mid_right, border_style)
                 rem -= 5
 

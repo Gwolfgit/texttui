@@ -196,7 +196,7 @@ class TuiPlot(Widget):
                     else:
                         text += ch
             if on_color is not None:
-                text += f"[on black]"
+                text += "[on black]"
             text += "\n"
             text_lines.append(text)
 
@@ -551,7 +551,7 @@ class TuiPlot(Widget):
                 if isinstance(a.text, Text):
                     text_lines[y] = s[:idx] + f"[not bold {a.text.style.color.name}]" + an_text + f"[{restore_color}]" + post
                 else:
-                    text_lines[y] = s[:idx] + f"[not bold white]" + an_text + post
+                    text_lines[y] = s[:idx] + "[not bold white]" + an_text + post
 
     def _putpixel(self, x: int, y: int, ext: PlotExtents) -> None:
         """ Private method to set/clear a single pixel in the canvas """

@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import math
+
 try:
     from PIL import Image
     have_pil = True
@@ -798,7 +800,7 @@ class TuiPlot(Widget):
             height = int(img.height/4*scale)
             width = region.width
 
-        if scale != 1.0:
+        if not math.isclose(scale, 1.0, rel_tol=1e-09, abs_tol=0.0):
             ylist = []
             xlist = []
             for i in range(height):
